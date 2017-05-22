@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de custo de reuniões</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  <div class="container">
+  <div class="card">
+    <h4 class="card-header">Calculadora de custo de reuniões</h4>
+    <div class="card-block">
+      <div class="form-group row">
+        <label for="pessoas" class="col-6 col-form-label">Quantidade de Participantes</label>
+        <div class="col-6">
+          <div class="input-group">
+            <input class="form-control" type="number" id="pessoas" oninput="calculate()">
+            <span class="input-group-addon">Pessoas</span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="valorhora" class="col-6 col-form-label">Valor hora por participante</label>
+        <div class="col-6">
+          <div class="input-group">
+            <span class="input-group-addon">R$</span>
+            <input class="form-control" type="number" id="valorhora" oninput="calculate()">
+          </div>      
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="horassemana" class="col-6 col-form-label">Horas por semana em reunião</label>
+        <div class="col-6">
+          <div class="input-group">
+            <input class="form-control" type="number" id="horassemana" oninput="calculate()">
+            <span class="input-group-addon">Horas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-block">
+      <div class="list-group list-group-flush">
+        <div class="list-group-item flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <p class="mb-1">Custo mensal: </p>
+            <p><span id="resultadomes"></span></p>
+          </div>
+          <small>* Considerando 4 semanas no mês.</small>
+        </div>
+        <div class="list-group-item flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
+            <p class="mb-1">Custo anual: </p>
+            <p><span id="resultadoano"</span></p>
+          </div>
+          <small>* Considerando 11 meses de trabalho e 1 de férias.</small>
+        </div>       
+      </div>
+    </div>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
